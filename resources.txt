@@ -7,3 +7,5 @@ I used the following resources for this project:
 	c. https://developers.google.com/speed/pagespeed/module/filter-css-inline-google-fonts
 
 2. Google to understand what above-the-fold content is and how you figure out what is included (stackoverflow was the most useful here).
+
+3. Udacity forums (didn't always find much help here, but I try to always check).

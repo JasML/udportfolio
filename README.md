@@ -42,3 +42,6 @@ score by 1 for both desktop and mobile.
 
 2. In-lined Google fonts. PageSpeed Insights improved to 81 for mobile and 91
 for desktop.
+
+3. In-lined contents of print.css. PageSpeed Insights improved to 87 for mobile
+and 93 for desktop.
