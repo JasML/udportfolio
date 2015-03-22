@@ -3,5 +3,7 @@ I used the following resources for this project:
 1. Google Developers Web Fundamentals (https://developers.google.com/web/fundamentals/performance), including the following topics:
 
 	a. Render Blocking CSS
+	b. https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery
+	c. https://developers.google.com/speed/pagespeed/module/filter-css-inline-google-fonts
 
 2. Google to understand what above-the-fold content is and how you figure out what is included (stackoverflow was the most useful here).

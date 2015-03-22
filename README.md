@@ -39,3 +39,6 @@ score:
 
 1. Loaded analytics.js asynchronously. This improved my PageSpeed Insights
 score by 1 for both desktop and mobile.
+
+2. In-lined Google fonts. PageSpeed Insights improved to 81 for mobile and 91
+for desktop.
