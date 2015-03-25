@@ -32,6 +32,8 @@ $> ngrok 8080
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~ OPTIMIZATION SUMMARY ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ index.html ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The initial PageSpeed Insight scores were: 89 for desktop and 75 for mobile.
 
 The following optimizations were performed to improve the PageSpeed Insights
@@ -45,3 +47,14 @@ for desktop.
 
 3. In-lined contents of print.css. PageSpeed Insights improved to 87 for mobile
 and 93 for desktop.
+
+4. In-lined contents of style.css. PageSpeed Insights improved to 93 for mobile
+and 96 for desktop.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ main.js ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following modifications were made to speed up the scroll rate:
+
+1. In the updatePositions() function, moved the code that queries the current scrollTop element outside of the for loop. This made the average scroll rate almost 10 times faster.
+
+2. Moved the code that queries the document to find all of the pizza objects into the addEventListener() function instead of running that query every time the page is scrolled. This chance made the average scroll rate nearly 4 times faster.

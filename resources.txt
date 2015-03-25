@@ -9,3 +9,8 @@ I used the following resources for this project:
 2. Google to understand what above-the-fold content is and how you figure out what is included (stackoverflow was the most useful here).
 
 3. Udacity forums (didn't always find much help here, but I try to always check).
+
+4. Googled for resources on optimizing for scroll rate. Found the following sites helpful:
+
+	a. http://www.html5rocks.com/en/tutorials/speed/scrolling/
+	b. http://gent.ilcore.com/2011/03/how-not-to-trigger-layout-in-webkit.html
