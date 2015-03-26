@@ -449,11 +449,17 @@ var resizePizzas = function(size) {
   }
 
   // Iterates through pizza elements on the page and changes their widths
+  // Moved command to query number of randomPizzaCotainers outside of for loop
+  // Also replaced query commands inside the changePizzaSizes() function with
+  // the randomPizzaItems object built outside the function.
+  var randomPizzaItems = document.querySelectorAll(".randomPizzaContainer");
+  var randomPizzaLength = randomPizzaItems.length;
   function changePizzaSizes(size) {
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+    // Since all pizzas are sized together, only query current size once
+    var dx = determineDx(randomPizzaItems[1], size);
+    var newwidth = (randomPizzaItems[1].offsetWidth + dx) + 'px';
+    for (var i = 0; i < randomPizzaLength; i++) {
+      randomPizzaItems[i].style.width = newwidth;
     }
   }
 
@@ -491,7 +497,9 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
   for (var i = numberOfEntries - 1; i > numberOfEntries - 11; i--) {
     sum = sum + times[i].duration;
   }
-  console.log("Average time to generate last 10 frames: " + sum / 10 + "ms");
+  var tenFrameSum = sum / 10;
+  console.log("Average time (per frame) to generate last 10 frames: " + tenFrameSum + " ms");
+  console.log("Average scroll rate: " + 1000 / tenFrameSum + " Hz")
 }
 
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
@@ -546,7 +554,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
   items = document.querySelectorAll('.mover');
-  console.log(items);
   updatePositions();
 });
 
